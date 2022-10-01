@@ -1,6 +1,6 @@
 # changing-complex-state
 
-[Live View](https://kerwindows.github.io/react-ES6-spread-operator)
+[Live View](https://kerwindows.github.io/react-ES6-spread-operator/)
 
 Description
 
