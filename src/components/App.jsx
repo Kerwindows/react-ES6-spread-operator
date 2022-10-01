@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TodoItem from "./TodoItem";
 import "./App.css";
 
 function App() {
@@ -31,9 +32,7 @@ function App() {
       <div>
         <ul>
           {submittedTodoList.map((todoItems, _id) => (
-            <li key={_id} id={_id}>
-              {todoItems}
-            </li>
+            <TodoItem key={_id} id={_id} text={todoItems} />
           ))}
         </ul>
       </div>
