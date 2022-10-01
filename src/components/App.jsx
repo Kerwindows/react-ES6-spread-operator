@@ -1,41 +1,43 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
-
-  const [todoList, setTodoList] = useState('')
+  const [todoList, setTodoList] = useState("");
   const [submittedTodoList, setSubmittedTodoList] = useState([]);
 
   const handleAdd = (event) => {
     const newValue = event.target.value;
-    setTodoList(newValue)
-    
-  }
+    setTodoList(newValue);
+  };
 
   const addItem = () => {
-    setSubmittedTodoList(prevItems => {
-      return [...prevItems,todoList]
+    setSubmittedTodoList((prevItems) => {
+      return [...prevItems, todoList];
     });
-    setTodoList('');
-  }
+    setTodoList("");
+  };
 
   return (
     <div className="container">
-    <div className="heading">
-      <h1>To-Do List</h1>
+      <div className="heading">
+        <h1>To-Do List</h1>
+      </div>
+      <div className="form">
+        <input onChange={handleAdd} value={todoList} name="task" type="text" />
+        <button onClick={addItem}>
+          <span>Add</span>
+        </button>
+      </div>
+      <div>
+        <ul>
+          {submittedTodoList.map((todoItems, _id) => (
+            <li key={_id} id={_id}>
+              {todoItems}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-    <div className="form">
-      <input onChange={handleAdd} value={todoList} name='task' type="text" />
-      <button onClick={addItem}>
-        <span>Add</span>
-      </button>
-    </div>
-    <div>
-      <ul>
-        {submittedTodoList.map(todoItems=> <li>{todoItems}</li>)}
-      </ul>
-    </div>
-  </div>
-    
   );
 }
 
