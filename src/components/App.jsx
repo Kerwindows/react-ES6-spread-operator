@@ -13,7 +13,8 @@ function App() {
 
   const addItem = () => {
     setSubmittedTodoList((prevItems) => {
-      return [...prevItems, todoList];
+      //add newer items to the top
+      return [todoList, ...prevItems];
     });
     setTodoList("");
   };
