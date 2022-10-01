@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-ES6-spread-operator/static/css/main.0c1dc8a7.css",
+    "main.js": "/react-ES6-spread-operator/static/js/main.e34225f0.js",
+    "index.html": "/react-ES6-spread-operator/index.html",
+    "main.0c1dc8a7.css.map": "/react-ES6-spread-operator/static/css/main.0c1dc8a7.css.map",
+    "main.e34225f0.js.map": "/react-ES6-spread-operator/static/js/main.e34225f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c1dc8a7.css",
+    "static/js/main.e34225f0.js"
+  ]
+}
